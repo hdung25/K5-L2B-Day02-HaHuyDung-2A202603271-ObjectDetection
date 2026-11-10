@@ -36,3 +36,12 @@ Kết quả chấm lần 1 (F1 0.5495) cho thấy hai lỗi hệ thống: nhiề
 - Xe khách đã gán `bus` được đổi sang `van` theo phản hồi QC. Vì vậy ba ca `drive_008`, `drive_009`, `drive_012` ở bảng trên hiện mang nhãn `van` thay cho `bus`. Định nghĩa `bus`/`van` của bộ dữ liệu này khác cách hiểu ban đầu (xe buýt thành phố vẫn bị tính là `van`), cần hỏi giảng viên xác nhận ranh giới hai lớp.
 - Khi rà tay: xóa box trùng và xe ở xa không xác định được lớp; xe có cabin tách rời với thùng hàng gán `truck`.
 
+
+### Rework 2 (bản nộp cuối)
+
+Sau rework 1 (F1 0.6512) vẫn còn 393 FP và 148 FN. Rework 2 rà lại từng ảnh theo kết quả per-image:
+
+- Thêm lại các xe bị che một phần hoặc bị cắt ở rìa ảnh nhưng vẫn nhận ra lớp (đúng quy tắc chung ở trên) — đây là nguồn FN chính.
+- Xóa box trùng trên cùng một xe và các box ở vùng không có xe; siết box sát mép thân xe nhìn thấy.
+- Box chạm rìa ảnh được cắt đúng tại biên (tọa độ trong [0, 1]), không kéo ra ngoài khung.
+- Kết quả: F1 0.9353, mean IoU 0.9840, checker 50/50.
