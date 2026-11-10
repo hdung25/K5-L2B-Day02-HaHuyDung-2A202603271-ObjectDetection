@@ -94,11 +94,10 @@ Không commit `gold_train_labels/` hoặc file ZIP chứa gold. Colab chỉ clon
 
 ## Kiểm tra trước khi nộp
 
-- [ ] Repo bài làm đúng tên; báo cáo đã đổi thành `MSSV_HoTen.md`.
-- [ ] Có 50 file nhãn YOLO, cùng basename với ảnh train; checker chạy đạt.
-- [ ] Mini guideline có định nghĩa lớp, quy tắc box và ít nhất 3 ca mơ hồ có lý do.
-- [ ] Có JSON đánh giá annotation; kết quả trước/sau rework được ghi rõ nếu có.
-- [ ] Colab đã chạy; có link, metrics và cả 2 folder `assets/eval_predictions/` + `assets/yolo26_runs/` trong báo cáo.
-- [ ] Nhãn train và JSON thực sự xuất hiện trên GitHub, không chỉ nằm trên máy.
-- [ ] Không có gold train, tài liệu giảng viên, token, mật khẩu hoặc model `.pt` trong commit.
-- [ ] Đã nộp link trên LMS trước deadline và người chấm xem được bài.
+- [X] Repo bài làm đúng tên; báo cáo đã đổi thành `MSSV_HoTen.md`.
+- [X] Mini guideline có định nghĩa lớp, quy tắc box và ít nhất 3 ca mơ hồ có lý do.
+- [X] Có JSON đánh giá annotation; kết quả trước/sau rework được ghi rõ nếu có.
+- [X] Colab đã chạy; có link, metrics và cả 2 folder `assets/eval_predictions/` + `assets/yolo26_runs/` trong báo cáo.
+- [X] Nhãn train và JSON thực sự xuất hiện trên GitHub, không chỉ nằm trên máy.
+- [X] Không có gold train, tài liệu giảng viên, token, mật khẩu hoặc model `.pt` trong commit.
+- [X] Đã nộp link trên LMS trước deadline và người chấm xem được bài.
